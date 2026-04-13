@@ -18,6 +18,7 @@ print(f"Количество символов:' {len(input().replace(' ',''))}")
 text = input("")
 print(f"Верхний регистр: {text.upper()}")
 print(f"Нижний регистр: {text.lower()}")
+print(f"Инвертировать регистр: {text.swapcase()}")
 
 # подсчет вхождения слова в строке
 in_str = input("Введите строку: ")
