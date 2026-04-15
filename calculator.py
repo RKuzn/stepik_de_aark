@@ -3,6 +3,8 @@ def calculator():
     print("Простой калькулятор")
     print("Доступные операции: +, -, *, /, %")
 
+    #error mesages
+    error_div_zero = "Ошибка: деление на 0"
     while True:
         try:
             num1 = float(input("Первое число: "))
@@ -20,12 +22,12 @@ def calculator():
                 result = num1 * num2
             elif op == '/':
                 if num2 == 0:
-                    print("Ошибка: деление на 0")
+                    print(error_div_zero)
                     continue
                 result = num1 / num2
             elif op == '%':
                 if num2 == 0:
-                    print("Ошибка: деление на 0")
+                    print(error_div_zero)
                     continue
                 result = num1 % num2
             else:
@@ -37,4 +39,5 @@ def calculator():
         except ValueError:
             print("Ошибка: введите корректное число\n")
 
+#вызов калькулятора
 calculator()
