@@ -1,7 +1,7 @@
 def calculator():
     """Простой калькулятор с выбором операции"""
     print("Простой калькулятор")
-    print("Доступные операции: +, -, *, /, **, //")
+    print("Доступные операции: +, -, *, /, **, //, %")
 
     while True:
         try:
@@ -22,7 +22,7 @@ def calculator():
                 result = num1 ** num2
             elif op == '/':
                 if num2 == 0:
-                    print("Ошибка: деление на ноль")
+                    print("Ошибка: деление на 0")
                     continue
                 result = num1 / num2
             elif op == '//':
@@ -30,6 +30,11 @@ def calculator():
                     print("Ошибка: деление на ноль")
                     continue
                 result = num1 // num2
+            elif op == '%':
+                if num2 == 0:
+                    print("Ошибка: деление на 0")
+                    continue
+                result = num1 % num2
             else:
                 print("Неизвестная операция")
                 continue

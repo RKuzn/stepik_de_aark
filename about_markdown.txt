@@ -79,3 +79,5 @@ ___
 ```python
 def hello():
     print("Hello, World!")
+```
+закрытие блока кода
