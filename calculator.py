@@ -1,7 +1,7 @@
 def calculator():
     """Простой калькулятор с выбором операции"""
     print("Простой калькулятор")
-    print("Доступные операции: +, -, *, /, %")
+    print("Доступные операции: +, -, *, /, **, //, %")
 
     #error mesages
     error_div_zero = "Ошибка: деление на 0"
@@ -20,11 +20,18 @@ def calculator():
                 result = num1 - num2
             elif op == '*':
                 result = num1 * num2
+            elif op == '**':
+                result = num1 ** num2
             elif op == '/':
                 if num2 == 0:
                     print(error_div_zero)
                     continue
                 result = num1 / num2
+            elif op == '//':
+                if num2 == 0:
+                    print("Ошибка: деление на ноль")
+                    continue
+                result = num1 // num2
             elif op == '%':
                 if num2 == 0:
                     print(error_div_zero)
